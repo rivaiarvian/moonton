@@ -1,12 +1,12 @@
-import Input from '@/Components/Input';
-import Label from '@/Components/Label';
-import Button from '@/Components/Button';
-import { Link,Head } from "@inertiajs/inertia-react";
+import Input from "@/Components/Input";
+import Label from "@/Components/Label";
+import Button from "@/Components/Button";
+import { Link, Head } from "@inertiajs/inertia-react";
 
 function Login() {
     return (
         <>
-            <Head title="Sign In"/>
+            <Head title="Sign In" />
             <div className="mx-auto max-w-screen min-h-screen bg-black text-white md:px-10 px-3">
                 <div className="fixed top-[-50px] hidden lg:block">
                     <img
@@ -30,19 +30,15 @@ function Login() {
                         <form className="w-[370px]">
                             <div className="flex flex-col gap-6">
                                 <div>
-                                    <Label>
-                                        Email Address
-                                    </Label>
-                                    <Input 
+                                    <Label>Email Address</Label>
+                                    <Input
                                         type="email"
                                         name="email"
                                         placeholder="Email Address"
                                     />
                                 </div>
                                 <div>
-                                    <Label>
-                                        Password
-                                    </Label>
+                                    <Label>Password</Label>
                                     <Input
                                         type="password"
                                         name="password"
@@ -51,13 +47,18 @@ function Login() {
                                 </div>
                             </div>
                             <div className="grid space-y-[14px] mt-[30px]">
-                                <Button type='button' variant='primary'>
-                                    <span className="text-base font-semibold">
-                                        Start Watching
-                                    </span>
-                                </Button>
-                                <Link href={route('prototype.register')}>
-                                    <Button type='button' variant='light-outline'>
+                                <Link href={route("prototype.dashboard")}>
+                                    <Button type="button" variant="primary">
+                                        <span className="text-base font-semibold">
+                                            Start Watching
+                                        </span>
+                                    </Button>
+                                </Link>
+                                <Link href={route("prototype.register")}>
+                                    <Button
+                                        type="button"
+                                        variant="light-outline"
+                                    >
                                         <span className="text-base text-white">
                                             Create New Account
                                         </span>
