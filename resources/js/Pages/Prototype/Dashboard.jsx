@@ -31,7 +31,7 @@ function Dashboard() {
                     {[1, 2, 3, 4].map((i) => (
                         <FeatureMovie
                             key={i}
-                            slug=""
+                            slug="The Batman in Love"
                             name="The Batman in Love"
                             category="Action • Horror"
                             thumbnail="/assets/images/featured-1.png"
@@ -49,7 +49,7 @@ function Dashboard() {
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
                         <MovieCard
                             key={i}
-                            slug=""
+                            slug="Meong Golden"
                             name="Meong Golden"
                             category="Horror • Love"
                             thumbnail="/assets/images/browse-1.png"
