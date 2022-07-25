@@ -21,7 +21,7 @@ class MovieTableSeeder extends Seeder
                 'slug' => 'the-shawsenk-redemption',
                 'category' => 'Drama',
                 'video_url' => 'https://www.youtube.com/watch?v=D9JaTXsOHdg',
-                'thumbnail' => 'https://id.wikipedia.org/wiki/The_Shawshank_Redemption#/media/Berkas:ShawshankRedemptionMoviePoster.jpg',
+                'thumbnail' => 'https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg',
                 'rating' => 9.3,
                 'is_featured' => 1,
             ],
@@ -39,7 +39,7 @@ class MovieTableSeeder extends Seeder
                 'slug' => 'avengers-endgame',
                 'category' => 'Drama',
                 'video_url' => 'https://www.youtube.com/watch?v=TcMBFSGVi1c',
-                'thumbnail' => 'https://id.wikipedia.org/wiki/Avengers:_Endgame#/media/Berkas:Avengers_Endgame_poster.jpg',
+                'thumbnail' => 'https://www.layar.id/wp-content/uploads/2019/06/2-poster-avengers-endgame.jpg',
                 'rating' => 9.9,
                 'is_featured' => 0,
             ]
