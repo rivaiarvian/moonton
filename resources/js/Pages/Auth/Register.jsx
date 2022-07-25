@@ -126,7 +126,7 @@ function Register() {
                                         Sign Up
                                     </span>
                                 </Button>
-                                <Link href={route("prototype.login")}>
+                                <Link href={route("login")}>
                                     <Button variant="light-outline">
                                         <span className="text-base text-white">
                                             Sign In to My Account
