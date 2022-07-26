@@ -7,7 +7,7 @@ FeatureMovie.propTypes = {
     name: PropTypes.string.isRequired,
     thumbnail: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
-    rating: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
 };
 
 function FeatureMovie({ slug, name, category, thumbnail, rating = 0 }) {
@@ -45,7 +45,7 @@ function FeatureMovie({ slug, name, category, thumbnail, rating = 0 }) {
                 </div>
             </div>
             <Link
-                href={route("prototype.movie.show", slug)}
+                href={route("user.dashboard.movie.show", slug)}
                 className="inset-0 absolute z-50"
             ></Link>
         </div>

@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { Link } from "@inertiajs/inertia-react";
 
 function Topbar({name}) {
+    
     const [dropdownOpen, setDropdownOpen] = useState(true);
     const dropdownTarget = useRef();
 
@@ -57,7 +58,8 @@ function Topbar({name}) {
                         <Link
                             href={route('logout')}
                             method="post"
-                            className="transition-all hover:bg-sky-100 p-4"
+                            as="button"
+                            className="transition-all hover:bg-sky-100 p-4 text-left"
                         >
                             Sign Out
                         </Link>

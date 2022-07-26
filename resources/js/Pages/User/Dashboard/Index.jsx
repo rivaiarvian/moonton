@@ -4,7 +4,7 @@ import Authenticated from "@/Layouts/Authenticated/Index";
 import { Head } from "@inertiajs/inertia-react";
 import Flickity from "react-flickity-component";
 
-function Dashboard({auth,featuredMovies,movies}) {
+function Dashboard({ auth,featuredMovies,movies }) {
     const flickityOptions = {
         cellAlign: "left",
         contain: true,
