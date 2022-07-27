@@ -12,7 +12,7 @@ function Sidebar() {
                     <div>
                         <div className="text-gray-1 text-sm mb-4">Menu</div>
                         <a
-                            href={route("prototype.dashboard")}
+                            href={route("user.dashboard.index")}
                             className="side-link active"
                         >
                             <svg
@@ -86,7 +86,7 @@ function Sidebar() {
                     <div>
                         <div className="text-gray-1 side-link mb-4">Others</div>
                         <Link
-                            href={route("prototype.subscriptionPlan")}
+                            href={route("user.dashboard.subscriptionPlan.index")}
                             className="side-link"
                         >
                             <svg

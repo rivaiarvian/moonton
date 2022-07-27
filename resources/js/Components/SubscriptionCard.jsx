@@ -99,7 +99,7 @@ function SubscriptionCard({
                         ))}
                     </div>
 
-                    <div>
+                    <div onClick={onSelectSubscribtion}>
                         <Button>
                             <span className="text-base font-semibold">
                                 Subscribe Now
