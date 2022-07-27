@@ -78,11 +78,15 @@ function Login() {
                                 </div>
                             </div>
                             <div className="grid space-y-[14px] mt-[30px]">
-                                    <Button type="submit" variant="primary" processing={processing}>
-                                        <span className="text-base font-semibold">
-                                            Start Watching
-                                        </span>
-                                    </Button>
+                                <Button
+                                    type="submit"
+                                    variant="primary"
+                                    processing={processing}
+                                >
+                                    <span className="text-base font-semibold">
+                                        Start Watching
+                                    </span>
+                                </Button>
                                 <Link href={route("register")}>
                                     <Button
                                         type="button"

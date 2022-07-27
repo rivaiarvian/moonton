@@ -83,7 +83,6 @@ function Register() {
                                         type="email"
                                         name="email"
                                         value={data.email}
-                                        autoComplete="username"
                                         handleChange={onHandleChange}
                                         placeholder="Your Email Address"
                                         required
@@ -98,7 +97,6 @@ function Register() {
                                         name="password"
                                         placeholder="Your Password"
                                         value={data.password}
-                                        autoComplete="new-password"
                                         handleChange={onHandleChange}
                                         required
                                     />

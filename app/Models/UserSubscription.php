@@ -13,7 +13,7 @@ class UserSubscription extends Model
 
     protected $fillable = ['user_id', 'subscription_plan_id', 'price', 'expired_date', 'payment_status', 'snapToken'];
 
-    public function subscriptionPlan()
+    public function subscriptionPlan(): BelongsTo
     {
         return $this->belongsTo(SubscriptionPlan::class);
     }
