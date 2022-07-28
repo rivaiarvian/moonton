@@ -9,8 +9,6 @@ function SubscriptionDetail({
     const remainingDays = activeDay - remainingActiveDay
     const loadingProgress = () => {
         const progres = remainingDays / activeDay;
-        console.log('progres',progres)
-        console.log('remainingDays',remainingDays)
 
         if(progres < 0.25){
             return 'w-3/12'
