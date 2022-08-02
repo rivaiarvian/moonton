@@ -5,15 +5,11 @@ import Checkbox from "@/Components/Checkbox";
 import Button from "@/Components/Button";
 import ValidationErrors from "@/Components/ValidationErrors";
 import { Head, useForm } from "@inertiajs/inertia-react";
+import { Inertia } from "@inertiajs/inertia";
 
-function Create({ auth }) {
-    const { setData, post, processing, errors, reset } = useForm({
-        name: "",
-        category: "",
-        video_url: "",
-        thumbnail: "",
-        rating: "",
-        is_featured: false,
+function Edit({ auth, movie }) {
+    const { data, setData, processing, errors } = useForm({
+        ...movie,
     });
 
     const onHandleChange = (event) => {
@@ -28,12 +24,19 @@ function Create({ auth }) {
     const submit = (e) => {
         e.preventDefault();
 
-        post(route("admin.dashboard.movie.store"));
+        if (data.thumbnail === movie.thumbnail) {
+            delete data.thumbnail;
+        }
+
+        Inertia.post(route("admin.dashboard.movie.update", movie.id), {
+            _method: "PUT",
+            ...data,
+        });
     };
     return (
         <Authenticated auth={auth}>
-            <Head title="Admin - Create Movie" />
-            <h1 className="text-xl">Insert a new Movie</h1>
+            <Head title="Admin - Update Movie" />
+            <h1 className="text-xl">Update Movie : {movie.name}</h1>
             <hr className="mb-4" />
             <ValidationErrors errors={errors} />
             <form onSubmit={submit}>
@@ -41,6 +44,7 @@ function Create({ auth }) {
                 <Input
                     type="text"
                     name="name"
+                    defaultValue={movie.name}
                     variant="primary-outline"
                     placeholder="Enter the name of the movie"
                     isFocused={true}
@@ -51,6 +55,7 @@ function Create({ auth }) {
                 <Input
                     type="text"
                     name="category"
+                    defaultValue={movie.category}
                     variant="primary-outline"
                     placeholder="Enter the category of the movie"
                     isFocused={true}
@@ -61,6 +66,7 @@ function Create({ auth }) {
                 <Input
                     type="text"
                     name="video_url"
+                    defaultValue={movie.video_url}
                     variant="primary-outline"
                     placeholder="Enter the video url of the movie"
                     isFocused={true}
@@ -68,6 +74,7 @@ function Create({ auth }) {
                     isError={errors.video_url}
                 />
                 <Label className="mt-4">Thumbnail</Label>
+                <img src={`/storage/${movie.thumbnail}`} className="w-40" />
                 <Input
                     type="file"
                     name="thumbnail"
@@ -81,6 +88,7 @@ function Create({ auth }) {
                 <Input
                     type="number"
                     name="rating"
+                    defaultValue={movie.rating}
                     variant="primary-outline"
                     placeholder="Enter the rating of the movie"
                     isFocused={true}
@@ -94,14 +102,15 @@ function Create({ auth }) {
                         handleChange={(e) =>
                             setData("is_featured", e.target.checked)
                         }
+                        checked={movie.is_featured}
                     />
                 </div>
                 <Button type="submit" className=" mt-4" processing={processing}>
-                    Save
+                    Update
                 </Button>
             </form>
         </Authenticated>
     );
 }
 
-export default Create;
+export default Edit;
